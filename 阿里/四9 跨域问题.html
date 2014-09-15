@@ -1,0 +1,14 @@
+<html>
+ <head></head>
+ <body>
+  <script type="text/javascript">
+    function handle(response){
+    	alert(response.name);
+    }
+    var script=document.createElement("script");
+    script.src="http://a.com/api.php?jsoncallback=handle";
+    document.body.insertBefore(script,document.body.firstChild);
+  </script>
+
+ </body>
+</html>

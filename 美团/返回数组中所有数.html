@@ -1,0 +1,27 @@
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+      var getUniEle =function(rawArr){
+      	if(Object.prototype.toString.apply(rawArr)!=='[object Array]'){
+      		throw Error("the param must be an Array");
+      	}
+      	var result=[],
+      	    process=function(arr){
+      	    	var i,
+      	    	    m;
+      	    	for (var i = 0,m=arr.length; i < m; i++) {
+      	    		if(typeof arr[i]==='number'&&result.indexOf(arr[i])===-1){
+      	    			result.push(arr[i]);
+      	    		}else if(Object.prototype.toString.apply(arr[i])==='[object Array]'){
+      	    			process(arr[i]);
+      	    		}
+      	    	};
+      	    }
+      	    process(rawArr);
+      	    return result;
+      }
+      alert(getUniEle([1,2,3,[3,4,5]]));
+   </script>
+ </body>
+</html>

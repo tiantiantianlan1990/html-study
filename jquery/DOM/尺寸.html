@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../jquery-1.11.1.js"></script>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       $(function(){
+        $("button").click(function(){
+          var txt="";
+          txt +="width of div:"+$("#div1").width()+"<br/>";
+          txt +="height of div"+$("#div1").height()+"<br/>";
+          txt +="innerWidth of div"+$("#div1").innerWidth()+"<br/>";
+          txt +="innerHeight of div"+$("#div1").innerHeight()+"<br/>";
+          txt +="outerWidth of div"+$("#div1").outerWidth()+"<br/>";
+          txt +="outerHeight of div"+$("#div1").outerHeight()+"<br/>";
+          $("#div1").html(txt);          
+        })
+       });
+  	 </script>
+      <div id="div1" style="height:300px;width:300px;padding:10px;margin:3px;border:1px solid blue;background-color:lightblue;"></div>
+      <button>显示 div 的尺寸</button>
+      <p>width() - 返回元素的宽度。</p>
+      <p>height() - 返回元素的高度。</p>
+  </body>
+</html> 

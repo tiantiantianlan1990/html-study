@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+      var List=function(){
+        this.data=[];
+      };
+      List.prototype.add=function(e){
+        this.data.push(e);
+      }
+      List.prototype.length=function(){
+        return this.data.length;
+      };
+      var l=new List();
+      l.add(1);
+      l.add(2);
+      alert(l.length());
+   </script>
+ </body>
+</html>

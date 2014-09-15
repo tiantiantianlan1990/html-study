@@ -1,0 +1,22 @@
+<html>
+  <head></head>
+  <body>
+    <input type="text" id="put" size="1000"/>
+    <script type="text/javascript">
+      function counter(){
+      	var date=new Date();
+      	var year=date.getFullYear();
+      	console.log(year);
+      	var date2=new Date(year,12,31,23,59,59);
+      	var time=(date2-date)/1000;
+      	var day=Math.floor(time/(60*60*24));
+      	var hour=Math.floor(time%(60*60*24)/(60*60));
+      	var minute=Math.floor(time%(60*60*24)%(60*60)/60);
+      	var second=Math.floor(time%(60*60*24)%(60*60)%60);
+      	var str=year+"年还剩"+day+"天"+hour+"小时"+minute+"分"+second+"秒";
+      	document.getElementById("put").value=str;
+      }
+      window.setInterval("counter()",1000);
+    </script>
+  </body>
+</html>

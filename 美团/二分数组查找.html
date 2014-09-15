@@ -1,0 +1,31 @@
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+
+      var getPosInArray=function(arr,ele){
+      	if(Object.prototype.toString.apply(arr)!=='[object Array]'){
+      		throw Error("the first param must be an array");
+      	}
+      	if(typeof ele!=="number"){
+      		throw Error("The second param must be a number!");
+      	}
+      	var left=0,
+      	    right=arr.length-1,
+      	    middle;
+      	 for(;left<=right;){
+      	 	middle=left+Math.floor((right-left)/2);
+      	 	if(arr[middle]===ele){
+      	 		return middle;
+      	 	}else if(arr[middle]>ele){
+      	 		right=middle-1;
+      	 	}else{
+      	 		left=middle+1;
+      	 	}
+      	 }
+      	 return left;
+      }
+      alert(getPosInArray([1,2,3],4));
+   </script>
+ </body>
+</html>

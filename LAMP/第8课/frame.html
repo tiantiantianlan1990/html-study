@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>后台管理页面</title> <!--分帧不能和body体共存-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  </head>
+   <frameset rows="80,*" frameborder="1" border="20">
+              <frame src="header.html" name="top" noresize="noresize">
+              
+              <!--第二行再分二列-->
+              <frameset cols="180,*">
+                <frame src="menu.html" name="left" noresize="noresize" scrolling="no">
+                <frame src="main.html" name="right" noresize="noresize">
+              </frameset>
+              <noframes>
+                你使用的是不带分帧的浏览器，请使用有分帧的浏览器或转向不使用分帧的页面
+              </noframes>
+           
+   </frameset>
+
+</html>
+
+  

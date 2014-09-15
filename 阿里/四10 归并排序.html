@@ -1,0 +1,59 @@
+<html>
+ <head>
+   <style type="text/css">
+
+   </style>
+ </head>
+ <body>
+
+   <script type="text/javascript">
+     function mergeSort(arr,first,last){
+     	var count=0;  
+       var tempA=new Array();
+       if(first<last){
+       	var mid = (first + last)>>>1;//求中位数 
+       	mergeSort(arr,first,mid,tempA);
+       	mergeSort(arr,mid+1,last,tempA);
+       	merge(arr,first,mid,last,tempA);
+       }
+        document.write("<br/>临时数组tempA ：第"+ count++ +"次执行的结果是:")  
+	    for (var n = 0; n < tempA.length; n++) {  
+	        document.write(tempA[n] + " ");  
+	    }  
+	    document.write("<br/>")  
+      
+        return arr;  
+     }
+   function merge(A,first,mid,last,tempA){  
+    var n1=first,n2=mid+1;  
+    var m=mid,L=last;  
+    var i=0;        
+    while(n1<=m && n2<=L){  
+        if(A[n1]<A[n2]){  
+            tempA[i]=A[n1];  
+            n1++;  
+            i++;  
+        }else{  
+            tempA[i]=A[n2];  
+            n2++;  
+            i++;  
+        }  
+    }  
+    while(n1<=m){  
+        tempA[i]=A[n1];  
+        n1++;  
+        i++;  
+    }  
+    while(n2<=L){  
+        tempA[i]=A[n2];  
+        n2++;  
+        i++;  
+    }  
+    for (n1 = 0; n1 < i; n1++)  
+        A[first + n1] = tempA[n1];//把临时数组copy到A中  
+  }
+  var arr=[1,5,2,7,4,2,8,10];
+  var n=arr.length;
+  mergeSort(arr,0,n-1);
+   </script>
+ </body>

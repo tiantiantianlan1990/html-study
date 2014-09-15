@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style type="text/css">
+     
+   </style>
+ </head>
+ <body>
+    <script type="text/javascript">
+       var table=document.createElement("table");
+       table.border=1;
+       table.width="100%";
+
+       var tbody=document.createElement("tbody");
+       table.appendChild(tbody);
+
+       var row1=document.createElement("tr");
+       tbody.appendChild(row1);
+       var cell_1=document.createElement("td");
+       cell_1.appendChild(document.createTextNode("1.1"));
+       row1.appendChild(cell_1);
+       var cell_2=document.createElement("td");
+       cell_2.appendChild(document.createTextNode("1.2"));
+       row1.appendChild(cell_2);
+
+       document.body.appendChild(table);
+    </script>
+ </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+     //callee 代表函数自身，用在匿名函数中。在函数内部，argument.callee该属性是一个指针，指向拥有 这个arguments对象的函数;
+     // caller 代表函数执行的时候，被嵌套的父层函数。如果函数在全局作用域中调用，它的值为null。
+     var a=(function(num){
+       if(num==1){
+        return 1
+       }
+       return num*arguments.callee(num-1);
+     })(6);
+      console.log(a);
+      function aaa(){
+        console.log(arguments.callee.caller);
+      }
+      function bbb(){
+        aaa();
+      }
+      bbb();
+   </script>
+ </body>
+</html>

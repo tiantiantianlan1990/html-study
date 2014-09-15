@@ -1,0 +1,18 @@
+<html>
+ <head>
+  <script type="text/javascript">
+     function test(obj){
+     	if(obj.value.length>=10){
+     		obj.style.borderColor="red";
+     	}
+     	else{
+     		obj.style.borderColor="";
+     	}
+     }
+  </script>
+</head>
+ <body>
+  <input type="text" maxlength="10" oninput="test(this)" />
+ 
+ </body>
+</html>

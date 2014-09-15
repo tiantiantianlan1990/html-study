@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title></title>
+</head>
+
+<body>
+	<textarea id="txt1"></textarea>
+	<p>你输入了<span id="in">0</span>个字符，一共可以输入30个字符，你还可以输入<span id="out">30</span>个字符</p>
+<script type="text/javascript">
+	var oTxt=document.getElementById('txt1'),
+		oIn=document.getElementById('in'),
+		oOut=document.getElementById('out');
+	oTxt.oninput=function() {
+		oOut.innerHTML=30-get_length(this.value);
+		oIn.innerHTML=get_length(this.value);
+	};
+    function get_length(str){
+        var iNum=0;
+        for (var i = 0,l=str.length; i < l ; i++) {
+            encodeURI(str.charAt(i)).length>2 ? iNum+=2 : iNum++;
+        }
+        return iNum;
+    }
+    if (document.all) {
+		oTxt.attachEvent('onpropertychange', function(e) {
+			if (e.propertyName != 'value') return;
+			oTxt.oninput();
+		});
+	}
+</script>
+</body>
+</html>

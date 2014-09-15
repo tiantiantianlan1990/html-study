@@ -1,0 +1,1 @@
+采用Django开发框架，进行快速的网站开发部署。Nginx作为web服务器，数据库采用Sqlite，便于维护。Ajax技术实现异步通信，CSS3/JavaScript/HTML5进行前端开发。svn来进行网站代码的版本管理。因为Django是一个开源的web开发框架，mvc模式搭建快速，由于是社交网站，admin接口方便对站点内容进行后台维护。社区中有丰富的资源可以利用。sqlite轻量级数据库便于部署和迁移。

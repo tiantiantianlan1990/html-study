@@ -1,0 +1,32 @@
+<html>
+  <head>
+  	<style type="text/css">
+      div{
+      	width: 100px;
+      	height: 100px;
+      }
+  	</style>
+  </head>
+  <body>
+    <div class="text">1111111111111</div>
+	<div class="qtext">1111111111112</div>
+	<div class="textq" >1111111111113</div>
+	<div class="qtextq" style="float:left">1111111111114</div>
+	<div class="qtes">1111111111115</div>
+	<script type="text/javascript">
+
+     //a[i].className可以直接得到class名
+       (function lllll(){
+       	var a=document.getElementsByTagName("div");
+        var reg=/text/;
+       	  for(var i=0;i<a.length;i++){
+       	  	if(reg.test(a[i].getAttribute("class")))
+       	  	{
+       	  		a[i].style.backgroundColor="yellow";
+       	  	}
+       	  }
+       })();
+      
+	</script>
+  </body>
+</html>

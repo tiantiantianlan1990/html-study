@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <script type="text/javascript">
+    console.log("hello");
+    console.info("这是info");
+　　console.debug("这是debug");
+　　console.warn("这是warn");
+　　console.error("这是error");
+    //占位符
+    console.log("%d年%d月%d日",2011,3,26);
+    var dog = {} ;
+　　dog.name = "大毛" ;
+　　dog.color = "黄色";
+    console.log("%o",dog);
+    //分组显示
+    console.group("第一组信息");
+　　　　console.log("第一组第一条");
+　　　　console.log("第一组第二条");
+　　console.groupEnd();
+　　console.group("第二组信息");
+　　　　console.log("第二组第一条");
+　　　　console.log("第二组第二条");
+　　console.groupEnd();
+   //console.dir()显示对象所有的属性和方法
+   dog.bark = function(){alert("汪汪汪");};
+   console.dir(dog);
+   //console.dirxml()显示网页的某个节点（node）所包含的html/xml代码
+    var u=document.getElementById("u");
+    console.dirxml(u);
+    //assert();
+    var result = 0;
+　　console.assert(result);
+　　var year = 2000;
+　　console.assert(year == 2011);
+    //console.trace()   
+    function add(a,b){
+        console.trace();
+　　　　return a+b;
+　　}
+    var x = add3(1,1);
+　　function add3(a,b){return add2(a,b);}
+　　function add2(a,b){return add1(a,b);}
+　　function add1(a,b){return add(a,b);}
+    //console.time()和console.timeEnd()，用来显示代码的运行时间
+　　console.time("计时器一");
+　　for(var i=0;i<1000;i++){
+　　　　for(var j=0;j<1000;j++){}
+　　}
+　　console.timeEnd("计时器一");
+   </script>
+  </head>
+  <body>
+   <div>
+     <p>111111111111</p>
+     <a>22222222222</a>
+     <ul id="u">
+     	<li>1</li>
+     	<li>2</li>
+     	<li>3</li>
+     	<li>4</li>
+     	<li>5</li>
+     	<li>6</li>
+     </ul>
+   </div>
+  </body>
+</html>

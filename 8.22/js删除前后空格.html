@@ -1,0 +1,17 @@
+<html>
+  <head>
+   <style type="text/css">
+ 
+   </style>
+  </head>
+  <body> 
+
+    <script type="text/javascript">
+      String.prototype.trim=function(){
+        return this.replace(/(^\s+)|(\s+$)/g,'');
+      }
+      var a="  aaaab  ";
+      console.log(a.trim());
+    </script>
+  </body>
+</html>

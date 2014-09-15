@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <style type="text/css">
+    body{
+      padding: 0;
+      margin: 0;
+    }
+    #myCanvas{
+      position: absolute;
+      left: 100px;
+      top: 100px;
+    }
+  </style>
+  <body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    	<script type="text/javascript">
+           var c=document.getElementById("myCanvas");
+           var cxt=c.getContext("2d");
+           cxt.beginPath();           
+           cxt.arc(100,100,99,0,2*Math.PI,false);
+           cxt.moveTo(194,100);
+           cxt.arc(100,100,94,0,2*Math.PI,false);
+
+           cxt.moveTo(100,100);
+           cxt.lineTo(100,15);
+           cxt.moveTo(100,100);
+           cxt.lineTo(35,100);
+           cxt.strokeStyle="#ff0000";
+           cxt.stroke();
+
+           cxt.font="bold 14px";
+           cxt.textAlign="center";
+           cxt.textBaseline="middle";
+           cxt.fillText("12",100,20);
+    	</script>
+  </body>
+</html>

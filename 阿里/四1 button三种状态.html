@@ -1,0 +1,28 @@
+<html>
+ <head>
+   <style type="text/css">
+     div{color: orange;width: 80px;height: 30px;border: solid 1px orange;text-align: center;line-height: 30px;}
+     .on{background-color: orange;color: white;}
+     .dis{display: none;}
+     .click{display: inline;color: white;}
+   </style>
+ </head>
+ <body>
+ 	<div id="div">Button<span class="dis">&radic;</span></div>
+   <script type="text/javascript">
+       var div=document.getElementById("div");
+       var s=document.getElementsByTagName("span");
+       div.onmouseover=function(){
+        this.className="on";
+        s[0].className="dis";
+       }
+       div.onmouseout=function(){
+       	this.className="";
+       	s[0].className="dis";
+       }
+       div.onclick=function(){
+       	 this.className="on";
+       	s[0].className="click";
+       }
+   </script>
+ </body>

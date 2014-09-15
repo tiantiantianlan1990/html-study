@@ -1,0 +1,52 @@
+<html>
+  <head></head>
+  <body>
+    <script type="text/javascript">
+      var xmlhttp;
+      function loadXMLDoc(url){
+        xmlhttp=null;
+        if(window.XMLHttpRequest){
+          xmlhttp =new XMLHttpRequest();
+        }
+        else if(window.ActiveXObject){
+          xmlhttp =new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        if(xmlhttp!=null){
+          xmlhttp.onreadystatechange=state_Change;
+          xmlhttp.open("GET",url,true);
+          xmlhttp.send(null);
+        }
+        else{
+          alert("error");
+        }
+      }
+      function state_Change(){
+        if(xmlhttp.readyState==4){
+          if(xmlhttp.status==200){
+            document.getElementById('a1').innerHTML=xmlhttp.status;
+            document.getElementById('a2').innerHTML=xmlhttp.statusText;
+            document.getElementById('a3').innerHTML=xmlhttp.responseText;
+          }
+          else{
+            alert("problem"+xmlhttp.statusText);
+          }
+        }
+      }
+    </script>
+       <p><b>Status:</b>
+       <span id="a1"></span>
+       </p>
+
+       <p><b>Status text:</b>
+       <span id="a2"></span>
+       </p>
+
+       <p><b>Response:</b>
+       <br /><span id="a3"></span>
+      </p>
+
+       <button onclick="loadXMLDoc('/example/xmle/note.xml')">Get XML</button>
+
+  </body>
+
+</html>

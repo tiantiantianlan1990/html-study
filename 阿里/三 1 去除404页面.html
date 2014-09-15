@@ -1,0 +1,32 @@
+<html>
+ <head>
+ 
+ </head>
+ <body>
+   <script type="text/javascript">
+     function delurl(arr){
+      var xmlHttp;
+       if(window.ActiveXObject)  
+	    {  
+	        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");  
+	    }  
+	   else if(window.XMLHttpRequest)  
+	    {  
+	        xmlHttp=new XMLHttpRequest();  
+	    }
+	    for(var i=0;i<arr.length;i++){
+         xmlHttp.onreadystatechange= (function (e){  
+       //请求的状态有5个值：0=未初始化；1=正在加载；2=已经加载；3=交互中；4=完成；  
+	    if(xmlHttp.readyState==4){  
+	     if(xmlHttp.status==404){  
+	            arr.splice(i,1);
+	        } 
+	      } 
+	    })(i);   
+         xmlHttp.open("GET",arr[i],true);  
+         xmlHttp.send(); 
+	    }
+     }
+    
+   </script>
+ </body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+.div1{ height:1500px; background:red;}
+li{ margin:1000px 0;}
+</style>
+<title>sdf</title>
+</head>
+
+<body>
+	<div class="div1"></div>
+	<ul id="ul">
+		<li><img src="http://www.fcled.com/imgs/loading2.gif" _src="http://2e.zol-img.com.cn/product/76_450x337/856/ceWpb2VQ9Vwok.jpg" alt="" title="" /></li>
+		<li><img src="http://www.fcled.com/imgs/loading2.gif" _src="http://upload.news.cecb2b.com/2013/0417/1366170926810.jpg" alt="" title="" /></li>
+		<li><img src="http://www.fcled.com/imgs/loading2.gif" _src="http://www.zhishi5.com/uploadfile/dnwl/uploadfile/201103/20110323012800719.png" alt="" title="" /></li>
+	</ul>
+	<script type="text/javascript">
+		var oUl=document.getElementById('ul'),
+			aLi=oUl.getElementsByTagName('li'),
+			arr=[];
+		for (var i = 0,l=aLi.length; i < l ; i++) {
+			var ro = aLi[i].getBoundingClientRect();
+			arr.push(ro.top);
+			aLi[i].bl=1;
+		}
+		window.onscroll=function() {
+			var sTop=document.documentElement.scrollTop || document.body.scrollTop;
+			for (var i = 0,l=arr.length; i < l ; i++) {
+				if (arr[i]<(sTop+document.documentElement.clientHeight) && aLi[i].bl) {
+					var oImg=aLi[i].getElementsByTagName('img')[0];
+					var url=oImg.getAttribute('_src');
+					oImg.setAttribute('src',url);
+					aLi[i].bl=0;
+				}
+			}
+		};
+	</script>
+</body>
+</html>

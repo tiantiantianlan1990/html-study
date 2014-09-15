@@ -1,0 +1,25 @@
+<html>
+ <head></head>
+ <body>
+  <script type="text/javascript">
+    function findoo(){
+    	var i,re=[];
+    	for(i=3;i<=10000;i++){
+    	  var flag=0;
+          for(j=2;j<i/2+1;j++){
+          	if(i%j==0){
+          		flag=1;
+          		break;
+          	}
+          }
+          if(flag==0){
+             re.push(i);
+          }
+    	}
+       return re;
+    }
+    var r=findoo();
+    console.log(r);
+  </script>
+ </body>
+</html>

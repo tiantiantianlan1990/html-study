@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style type="text/css">
+     *{padding: 0;margin: 0;}
+     div{float: left; 
+         width:120px;
+         border: 1px solid gray;
+         text-align: center;
+       }
+       span{
+        display: none;
+       }
+       #one{
+        background-color: lightgray;
+       }
+       #one{
+         margin-right: 20px;
+       }
+       .blue{
+        background-color: blue;
+        ba
+       }
+       .gray{
+        background-color: lightgray;
+       }
+       .s{
+        display: inline;
+       }
+   </style>
+  </head>
+  <body> 
+     <div id="one">月销售额</div>
+     <div class="gray">&yen;10000以下<span>&times;</span></div>
+     <div class="gray">&yen;10000-29999<span>&times;</span></div>
+     <div class="gray">&yen;30000-49999<span>&times;</span></div>
+     <div class="gray">&yen;50000以上<span>&times;</span></div>
+    <script type="text/javascript">
+      var a=document.getElementsByTagName("div");
+      var p=document.getElementsByTagName("span");
+      for(var i=1;i<a.length;i++){
+        a[i].onclick=(function(e){
+          return function(){
+            if(a[e].className=="gray"){
+            a[e].className="blue";
+            p[e-1].className="s";
+           }
+            else if(a[e].className=="blue"){
+            a[e].className="gray";
+            p[e-1].className="";
+           }
+          }
+          
+        })(i);
+      }
+    </script>
+  </body>
+</html>

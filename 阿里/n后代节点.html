@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <div id="one">
+  	<p id="two">
+       1111111111111111111111111111
+  	</p>
+  </div>
+    <script type="text/javascript">
+    function findNode(ele,n){
+      var i,j;
+      var nodesall=[];
+      if(n<=0)
+      	return nodesall;
+      var a=document.getElementsByTagName(ele);
+      nodesall.push(a[0]);
+      console.log(nodesall[0].childNodes);
+      for(j=1;j<=n;j++){
+      	var len=nodesall.length;
+      	console.log(len);
+        var k=0;
+      	for(k=0;k<len;k++){
+      	  if(nodesall[0].childNodes){
+      		for(i=0;i<nodesall[0].childNodes.length;i++){
+      			console.log(nodesall[0].childNodes[i]);
+      		  if(nodesall[0].childNodes[i].nodeType==1)
+	             nodesall.push(nodesall[0].childNodes[i]);
+	        }
+	       }
+	       nodesall.shift();
+	       console.log(nodesall);
+      	}     	
+      }
+      return nodesall;
+  }
+      var nodes=findNode("div",1);
+      console.log(nodes);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html>
+ <head>
+ 	<style type="text/css">
+       #center{
+       	 position: absolute;
+       	 width: 6px;
+       	 height: 6px;
+       	 left: 197px;
+       	 top: 297px;
+       	 border-radius: 3px;
+       	 background-color: black;
+       }
+       #move{
+       	position:absolute;
+       	width: 10px;
+       	height: 10px;
+       	top: 195px; 
+       	left:95px;
+       	border-radius: 5px;
+       	background-color: red;
+       }
+ 	</style>
+ </head>
+ <body>
+    <div id="center">
+    </div>
+    <div id="move">
+    </div>
+    <script type="text/javascript">
+       var div=document.getElementById("move");
+       var r=100,
+           left=div.offsetLeft,
+           top=div.offsetTop,
+           x=left+5,
+           y=top+5,
+           dir=true;
+      var loop1 = function() {
+	     x = x + 0.1;
+         y = Math.pow(r*r - Math.pow(x - 200, 2), 0.5) + 300;
+         div.style.left = (x - 5) + 'px';
+         div.style.top = (y - 5) + 'px'; 
+         dir = true; 
+         if (x > 300) {
+               dir = false;
+         }
+       };
+
+//上半弧运动
+var loop2 = function() {
+    x = x - 0.1;
+    y = 300 - Math.pow(r*r - Math.pow(x - 200, 2), 0.5);
+    div.style.left = (x - 5) + 'px';
+    div.style.top = (y - 5) + 'px'; 
+    dir = false;   
+    if (x < 100) {
+        dir = true;
+    }
+};
+
+setInterval(function() {
+    if (dir) {
+        loop1();
+    } else {
+        loop2();
+    }
+}, 0);
+
+
+    </script>
+ </body>
+
+</html>

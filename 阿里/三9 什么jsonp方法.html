@@ -1,0 +1,21 @@
+<html>
+ <head>
+ 
+ </head>
+ <body>
+   <script type="text/javascript">
+     function jsonp(url,data,callback){
+        callback();
+     }
+     for(var i=0;i<5;i++){
+     	(function(index){
+         jsonp("http://ju.taobao.com/api.php",{
+         	cat:1111,
+         	page:1
+         },function(){
+         	console.log(index);
+         });
+     	})(i);
+     }
+   </script>
+ </body>

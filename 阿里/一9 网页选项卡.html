@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style type="text/css">
+     *{
+      padding: 0;
+      margin: 0;
+     }
+     li{
+       margin: 0;
+       padding: 0;
+       list-style-type: none;
+     }
+     #menu li{
+      float: left;
+      margin:0 3px 0 0;
+      background-color: gray;
+      border: 1px solid #666;
+      z-index: 100;
+      border-bottom: 0;
+      position: relative;
+     }
+     #menu li.tabFocus{
+      background-color: white;
+     }
+     #content{
+      clear: left;
+      margin: 0px;
+      border: 1px solid #666;
+      position: relative;
+      top: -2px;
+      width: 150px;
+      overflow: hidden;
+     }
+     #content li{
+      display: none;
+     }
+     #content li.conFocus{
+      display: block;
+     }
+   </style>
+   <meta name="save" content="history">
+  </head>
+  <body> 
+    <ul id="menu">
+      <li>Tab1</li>
+      <li>Tab2</li>
+      <li>Tab3</li>
+    </ul>
+    <ul id="content">
+      <li>ÄÚÈÝ1</li>
+      <li>ÄÚÈÝ2</li>
+      <li>ÄÚÈÝ3</li>
+    </ul>
+    <script type="text/javascript">
+      var a=document.getElementById("menu");
+      var b=[];
+      for(var i=0;i<a.childNodes.length;i++){
+        if(a.childNodes[i].nodeType==1){
+          b.push(a.childNodes[i]);
+        }
+      }
+      var a2=document.getElementById("content");
+      var b2=[];
+      for(var i=0;i<a2.childNodes.length;i++){
+        if(a2.childNodes[i].nodeType==1){
+          b2.push(a2.childNodes[i]);
+        }
+      }
+      for(var j=0;j<b.length;j++){
+        b[j].onmouseover=(function(e){
+          return function(){
+           for(var k=0;k<b.length;k++){
+           b[k].className="";
+           b2[k].className="";           
+           }
+          b[e].className="tabFocus";
+          b2[e].className="conFocus";
+          }
+        })(j);
+
+      }
+    </script>
+  </body>
+</html>

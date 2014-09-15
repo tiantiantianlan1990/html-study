@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../jquery-1.11.1.js"></script>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       $(document).ready(function(){
+       	 $("#btn1").click(function(){
+          $("p").append("<b>text</b>");
+         });
+         $("#btn2").click(function(){
+          $("ol").append("<li>item</li>");
+         });
+         $("#btn3").click(function(){
+          $("ol").prepend("<li>item1</li>");
+         });
+       });
+  	 </script>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+    </ol>
+    <button id="btn1">追加文本</button>
+    <button id="btn2">追加列表项</button>
+    <button id="btn3">在开头增加列表项</button>
+  </body>
+</html>

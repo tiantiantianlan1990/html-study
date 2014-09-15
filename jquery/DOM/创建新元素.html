@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../jquery-1.11.1.js"></script>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       function appendText(){
+        var txt1="<p>text.</p>";
+        var txt2=$("<p></p>").text("text.");
+        var txt3=document.createElement("p");
+        txt3.innerHTML="text.";
+        $("body").append(txt1,txt2,txt3);
+       }
+  	 </script>
+    <p>This is a paragraph.</p>
+    <button onclick="appendText()">追加文本</button>
+  </body>
+</html> 

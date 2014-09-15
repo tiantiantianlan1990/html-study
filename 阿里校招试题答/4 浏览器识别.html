@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+       (function check(){
+       	var ua=navigator.userAgent;
+       	var re;
+       	if(/AppleWebKit\/(\S+)/.test(ua)){
+           re="chrome";
+       	}
+       	else if(/rv:([^\)]+)\) Gecko\//.test(ua)){
+       		re="firefox"
+       	}
+       	else if(/MSIE ([^;]+)/.test(ua)){
+       		re="ie"
+       	}
+       	alert(re);
+        return re;
+       })();
+   </script>
+ </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="editplus" />
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+*{margin:0; padding:0;}
+ul,li{list-style:none;}
+a{display:block;float:left;width:9px; height:15px; background:url(images/star_big3.gif) no-repeat; overflow:hidden;}
+.r{background-position:-9px 0;}
+a:hover,.on1{ background-position:1px -15px}
+.r:hover,.on2{ background-position:-7px -15px}
+</style>
+<title></title>
+</head>
+
+<body>
+<a href="#" title="" target="_blank"></a><a class="r" href="#" title="" target="_blank"></a>
+<a href="#" title="" target="_blank"></a><a class="r" href="#" title="" target="_blank"></a>
+<a href="#" title="" target="_blank"></a><a class="r" href="#" title="" target="_blank"></a>
+<a href="#" title="" target="_blank"></a><a class="r" href="#" title="" target="_blank"></a>
+<a href="#" title="" target="_blank"></a><a class="r" href="#" title="" target="_blank"></a>
+<a href="#" title="" target="_blank"></a><a class="r" href="#" title="" target="_blank"></a>
+</body>
+<script type="text/javascript">
+var aA=document.getElementsByTagName('a');
+for (var i = 0,l=aA.length; i < l ; i++) {
+	aA[i].onmouseover=function(i) {
+		return function (){
+			for(var k=0,u=aA.length; k<u; k++){
+				if (k%2) {
+					aA[k].className="r";
+				}else{
+					aA[k].className="";
+				}
+			}
+			for(var k=0; k<=i; k++){
+				if (k%2) {
+					aA[k].className="r on2";
+				}else{
+					aA[k].className="on1";
+				}
+			}
+		}
+	}(i);
+}
+</script>
+</html>

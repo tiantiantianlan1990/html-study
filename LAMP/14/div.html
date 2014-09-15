@@ -1,0 +1,56 @@
+<html>
+  <head>
+     <title>DIV+CSS页面布局</title>
+     
+     <style>
+	     body
+		 {
+			 margin:0px;
+		 }
+
+		 #one
+		 {
+			float:left;
+             width:200px;
+			 height:200px;
+			 background:red;		 
+		 }
+		  #two
+		 {
+			/*使用float脱离了文档流 不会占用文档流空间设成了浮动的 会覆盖上下面的*/
+			
+             width:200px;
+			 height:200px;
+			 background:green;		 
+		 }
+		 #three
+		 {
+			 /*使用float脱离了文档流 不会占用文档流空间设成了浮动的 会覆盖上下面的*/
+            
+             width:200px;
+			 height:200px;
+			 background:blue;
+			 		 
+		 }
+
+
+	 </style>
+  </head>
+  
+  <body>
+     <div  id="one">
+          aaa
+     </div>
+      <div id="two">
+          bbb
+     </div>
+      <div id="three">
+          ccc
+     </div>
+     111111111111111
+
+  
+  </body>
+  
+  
+</html>

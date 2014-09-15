@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+   <style type="text/css">
+    body{
+      padding: 0;
+      margin: 0;
+    }
+    #myCanvas{
+      position: absolute;
+      left: 100px;
+      top: 100px;
+    }
+    </style>
+
+
+  </head>
+ 
+  <body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    	<script type="text/javascript">
+           var c=document.getElementById("myCanvas");
+           var cxt=c.getContext("2d");
+           /*创建一个新的线性渐变，参数为 起点坐标 终点坐标*/
+           var gradient=cxt.createLinearGradient(30,30,80,80);
+          /* 指定色标 参数：色标位置 颜色*/
+           gradient.addColorStop(0,"white");
+           gradient.addColorStop(1,"black");
+ 
+           var gradient2=cxt.createRadialGradient(75,75,10,75,75,30);
+           gradient2.addColorStop(0,"white");
+           gradient2.addColorStop(1,"black");                   
+           cxt.fillStyle="#ff0000";
+           cxt.fillRect(10,10,50,50);
+          cxt.fillStyle=gradient;
+           cxt.fillRect(30,30,50,50); 
+
+           cxt.fillStyle=gradient2;
+           cxt.fillRect(50,50,50,50); 
+
+    	</script>
+  </body>
+</html>

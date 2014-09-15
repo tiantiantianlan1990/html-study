@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>js滑动门</title>
+<style type="text/css">
+div{
+display:none;}
+ul{
+margin-left:-30px;
+list-style-type:none;
+margin-top:0px;
+}
+li{
+width:80px;
+background-color:#CCCCCC;
+text-align:center;
+display:block;
+padding:4px 0px 2px 0px;
+}
+li a{
+text-decoration:none;
+color:#666;
+padding:4px 0px 2px 0px;
+}
+li a:hover{
+color:#00F;
+display:block;
+background-color:#FFFF00;
+border-style:solid;
+border-color:#009900;
+border-width:2px;
+}
+span a:hover{
+ color:#FF0;
+ }
+span a{
+ text-decoration:none;
+ }
+</style>
+<script language="javascript" type="text/javascript">
+function show(num){
+ document.getElementById(num).style.display="block";
+}
+function hidden1(num){
+ document.getElementById(num).style.display="none";
+}
+</script>
+</head>
+<body>
+<table  border="0">
+  <tr>
+    <td width="110px"onmousemove="show(1)" onmouseout="hidden1(1)" bgcolor="#FF99CC"><span><a href="#">第一组</a></span></td>
+    <td width="110px"onmousemove="show(2)" onmouseout="hidden1(2)" bgcolor="#FF99CC"><span><a href="#">第二组</a></span></td>
+    <td width="110px"onmousemove="show(3)" onmouseout="hidden1(3)"bgcolor="#FF99CC"><span><a href="#">第三组</a></span></td>
+    <td width="110px"onmousemove="show(4)" onmouseout="hidden1(4)"bgcolor="#FF99CC"><span><a href="#">第四组</a></span></td>
+  </tr>
+  <tr>
+    <td onmousemove="show(1)" onmouseout="hidden1(1)">
+ <div id="1">
+  <ul>
+   <li><a href="#">吕志强</a></li>
+   <li><a href="#">张翔宇</a></li>
+   <li><a href="#">赵继松</a></li>
+   <li><a href="#">马艳玲</a></li>
+  </ul>
+ </div>
+ </td>
+    <td onmousemove="show(2)" onmouseout="hidden1(2)">
+ <div id="2">
+  <ul>
+   <li><a href="#">王继超</a></li>
+   <li><a href="#">武婷婷</a></li>
+   <li><a href="#">赵兴蕾</a></li>
+   <li><a href="#">张伟</a></li>
+  </ul>
+ </div>
+ </td>
+    <td onmousemove="show(3)" onmouseout="hidden1(3)">
+ <div id="3">
+  <ul>
+   <li><a href="#">张伟涛</a></li>
+   <li><a href="#">王浩</a></li>
+   <li><a href="#">张黎</a></li>
+   <li><a href="#">刘丹</a></li>
+  </ul>
+ </div>
+ </td>
+    <td onmousemove="show(4)" onmouseout="hidden1(4)">
+ <div id="4">
+  <ul>
+   <li><a href="#">戴玉硕</a></li>
+   <li><a href="#">蒋公正</a></li>
+   <li><a href="#">王硕</a></li>
+   <li><a href="#">吴雷</a></li>
+  </ul>
+ </div>
+ </td>
+  </tr>
+</table>
+</body>
+</html>

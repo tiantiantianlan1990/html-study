@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style type="text/css">
+     *{padding: 0;margin: 0}
+     h4{border: 1px solid black;}
+     div{width: 80px;}
+     .light{background-color: lightgray;}
+     .gray{background-color: gray;}
+     .v{visibility: visible;}
+     .d{visibility: hidden;}
+   </style>
+  </head>
+  <body> 
+     <div id="title" class="light"><h4>我的菜单</h4></div>
+     <div id="m" class="d">
+        <a>菜单项一</a>
+        <a>菜单项二</a>
+        <a>菜单项三</a> 
+     </div>
+    <script type="text/javascript">
+       var a=document.getElementById("title");
+       var b=document.getElementById("m");
+       var c=document.getElementsByTagName("div")
+       a.onmouseover=function(){
+        b.className="v";
+        a.style.backgroundColor="gray";
+       }
+       for(var i=0;i<c.length;i++){
+       c[i].onmouseout=function(){
+        b.className="d";
+        a.style.backgroundColor="lightgray";
+       }
+       }
+
+    </script>
+  </body>
+</html>

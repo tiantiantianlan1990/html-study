@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style type="text/css">
+ 
+   </style>
+  </head>
+  <body> 
+
+    <script type="text/javascript">
+       (function(window){
+         function fn(str){
+          this.str=str;
+         }
+         fn.prototype.format=function(){
+          var arg=arguments;
+          return this.str.replace(/\{(\d)\}/g,function(a,b){
+            return arg[b]||'';
+          });
+         }
+         window.fn=fn;
+       })(window);
+       (function(){
+        var t=new fn('<p><a href="{0}">{1}</a>');
+        console.log(t.format('http://www.baidu.com','ali'));
+       })();
+    </script>
+  </body>
+</html>

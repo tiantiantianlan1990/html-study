@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-1.11.1.js"></script>
+    <style type="text/css">
+      body{margin: 0px;padding: 0px}
+      ul li{margin: 0;padding: 0;list-style-type: none}
+      #menu li{text-align: center;float: left;padding: 5px;margin-left: 2px;width: 50px;cursor: pointer}
+      #menu li.tabFocus{width: 50px;font-weight: bold;background-color: green;border: solid 1px #666;border-bottom: 0;z-index: 100;position: relative}
+      #content{width: 260px;height: 80px;padding: 10px;background-color: green;clear: left;border:solid 1px #666;position: relative;top: -1px}
+      #content li{display: none}
+      #content li.conFocus{display: block}
+    </style>
+    <script type="text/javascript">
+     $(function(){
+       $("#menu li").each(function(index){
+         $(this).click(function(){
+          $("#menu li.tabFocus").removeClass("tabFocus");
+          $(this).addClass("tabFocus");
+          $("#content li:eq("+index+")").show().siblings().hide();
+         })
+       })
+     });
+     </script>
+
+  </head>
+  <body>
+    <ul id="menu">
+      <li class="tabFocus">家居</li>
+      <li>电器</li>
+      <li>二手</li>
+    </ul>
+    <ul id="content">
+      <li class="conFocus">我是家居的内容</li>
+      <li>我是电器的内容</li>
+      <li>我是二手的内容</li>
+    </ul>
+  </body>
+</html> 

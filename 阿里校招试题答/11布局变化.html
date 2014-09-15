@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style type="text/css">
+     @media screen and(min-width: 600px){
+       nav{ width:20%;float:left}
+       section{width:80%;float:left;} 	
+     }
+     @media screen and(max-width: 600px){
+     	nav {width: 100%;clear: both;}
+     	nav div{display: inline;}
+     	section{width: 100%;clear: left;}
+     }
+
+
+   </style>
+ </head>
+ <body >
+  <div style="width:960px;margin:0 auto;background-color:gray;overflow:hidden;">
+   <header ><h1 style="text-align:center;">阿里巴巴面试题</h1></header>
+   <nav >
+     <div><a href="">前端工程师面试题</a></div>
+     <div><a href="">设计师面试题</a></div>
+     <div><a href="">java面试题</a></div>
+   </nav>
+   <section>
+     <table border="1" cellspacing=0 width="100%">
+       <tr>
+         <th width=33%>我是标题一</th>
+         <th width=33%>标题二</th>
+         <th width=33%>三</th>
+       </tr>
+       <tr>
+         <td>内容</td>
+         <td>内容</td>
+         <td>内容</td>
+       </tr>
+     </table>
+   </section>
+  </div>
+  <script type="text/javascript">
+  var n=document.getElementsByTagName("nav");
+    window.onresize=function(){
+    		if(document.documentElement.clientWidth<600px){
+               n[0].style.backgroundColor="black";
+    		}
+    
+    }
+  </script>
+ </body>
+</html>

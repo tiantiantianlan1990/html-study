@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style type="text/css">
+     
+   </style>
+ </head>
+ <body>
+    <table border=1 cellspacing=0 width="100px">
+      <tr id="t">
+        <td id="one">1</td>
+        <td id="two">2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+    </table>
+    <script type="text/javascript">
+       var a=document.getElementById("one");
+       a.parentNode.appendChild(a);
+    </script>
+ </body>
+</html>

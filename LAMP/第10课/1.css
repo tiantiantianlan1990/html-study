@@ -1,0 +1,8 @@
+/*这里直接写CSS即可*/
+
+p{
+	color:green;
+	background-color:red;
+	border:5px solid #000;
+	font-size:18px;
+}

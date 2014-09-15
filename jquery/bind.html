@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-1.11.1.js"></script>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       $(function(){
+        $("#btnBind").bind("click",function(){
+          $(this).attr("disabled","disabled");
+        });
+       });
+  	 </script>
+    <button id="btnBind">Button</button>
+  </body>
+</html> 

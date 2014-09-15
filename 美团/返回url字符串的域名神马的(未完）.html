@@ -1,0 +1,11 @@
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+     var regResult=[];
+     var url="http://www.baidu.com:8080/plane/query/queryPlane.html?name=a&value=1#tags";
+     var reg=/(?:(\w+):\/\/)?(\w+(?:\.\w+)*)(?:\:(\d+))?(?:\/([^?#]+))?/
+     regResult=url.match(reg);
+   </script>
+ </body>
+</html>

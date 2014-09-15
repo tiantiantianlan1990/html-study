@@ -1,0 +1,24 @@
+<html>
+  <head></head>
+  <body>
+   <script type="text/javascript">
+     window.onload=function(){
+     	var l=document.links.length;
+     	for(var i=0;i<l;i++){
+           document.links[i].onclick=function(x){
+           	 return function(){
+           	 	alert(x+1);
+           	 }
+           }(i);
+     	}
+     }
+   </script>
+   <a href="#">1</a>
+   <a href="#">2</a>
+   <a href="#">3</a>
+   <a href="#">4</a>
+   <a href="#">5</a>
+   <a href="#">6</a>
+  </body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+ <head>
+    <style type="text/css">
+     #send{
+     	width: 20px;
+     	height: 20px;
+     	background-color: green;
+     }
+    </style>
+ </head>
+ <body>
+ 	<div id="content">
+      <div class="items">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items">4</div>
+      <div class="items">5</div>
+      <div class="items">6</div>
+   </div>
+   <div id="send"></div>
+
+   <script type="text/javascript">
+      (function(){
+      	var a=[];
+        var con=document.getElementById("content");
+        con.addEventListener('click',function(e){
+        	var b=e.target;
+            a.push(b.innerHTML);
+        },false);
+        var send=document.getElementById("send");
+        send.onclick=function(){
+        	a.sort(function(one,two){
+        		return (two-one);
+        	});
+            alert(a);
+        }
+      })();
+   </script>
+ </body>

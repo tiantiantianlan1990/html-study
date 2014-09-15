@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style type="text/css">
+      </style>
+  </head>
+
+  <body>
+ 
+    	<script type="text/javascript">
+        function Person(name,age,job,a){
+          this.name=name;
+          this.age=age;
+          this.job=job;
+          this.friends=a;
+          this.sayName=function(){
+            alert(this.name);
+          }
+          this.sayFriends=function(){
+            alert(this.friends);
+          }
+        }
+        var person=new Person("qjm",24,"student",["qyj","a","b","c"]);
+        person.sayFriends();
+    	</script>
+  </body>
+</html>
+

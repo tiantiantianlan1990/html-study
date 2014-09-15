@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style type="text/css">
+ 
+   </style>
+  </head>
+  <body> 
+     <ul id="nav">
+      <li><a href="http://ju.taobao.com/tg/brand.htm">品牌团</a></li>
+      <li><a href="http://ju.taobao.com/tg/point_list.htm">整点聚</a></li>
+      <li><a href="http://ju.taobao.com/jusp/brand.htm">聚家装</a></li>
+      <li><a href="http://ju.taobao.com/jusp/brand.htm">量贩团</a></li>
+     </ul>
+    <script type="text/javascript">
+      (function(){
+        var ul=document.getElementById("nav");       
+        for(var i = 0, l = ul.childNodes.length; i < l; i++){
+          if(ul.childNodes[i].nodeType==1){
+           var li = ul.childNodes[i];          
+           li.onclick = (function(j){
+            return function(){
+              var obj=new Object();
+              obj.index=j;
+              obj.name=li.childNodes[0].innerHTML; 
+              obj.link=li.childNodes[0]["href"]; 
+              var str;
+              var x;
+              for(x in obj){
+                 str+=x+":"+obj[x]+"\n";
+              }
+              alert(str);
+            }
+           })(i+1)
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

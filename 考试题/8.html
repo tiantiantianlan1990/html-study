@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+      function findEle(a,b){
+          var obj={};
+          var res=[];
+          for(var i=0;i<b.length;i++){
+          	obj[b[i]]=1;
+          }
+          for(var j=0;j<a.length;j++){
+          	if(!obj[a[j]]){
+          		res.push(a[j]);
+          	}
+          }
+          return res;
+      }
+      alert(findEle([1,2,3],[1,2]));
+   </script>
+ </body>
+</html>

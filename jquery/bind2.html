@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-1.11.1.js"></script>
+    <style type="text/css">
+ 
+    </style>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       $(function(){
+        $(".txt").bind({focus:function(){
+          $("#divTip")
+            .show()
+            .html("focus");
+                     },
+                      change:function(){
+                      $("#divTip")
+                        .show()
+                        .html("change");
+                      }
+        });
+       });
+  	 </script>
+    <div>
+      姓名：<input type="text" class="txt"/>
+    </div>
+    <div id="divTip" ></div>
+  </body>
+</html> 

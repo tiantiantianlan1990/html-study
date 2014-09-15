@@ -1,0 +1,32 @@
+<html>
+  <head>
+   <script type="text/javascript">
+     var dog = function() {
+	return 'Ντ';
+	};
+	var cat = function(){
+	return 'ίχ';
+	};
+	(function() {
+	if ( cat() === 'ίχίχ' ) {
+	  dog = function(){
+	           return 'ΝτΝτ';
+	  }
+	} 
+	function cat(){
+	return 'ίχίχ';
+	} 
+	})();
+
+	for( var i = 0; i < 10; i++ ){
+	    setTimeout(function(){
+	        for( var j = 1; j <= i; j++ ){
+	            console.log( dog() );
+	        }
+	    }, 1000*i);
+	}
+
+   </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 深度优先遍历一个网页中的节点，找到文本节点中包括特殊字段{{{.+}}}的文本（被3个花括号包围），将花括号删除，提取出中间的文字部分，用span标签包裹替换掉原文本。仅考虑标准浏览器即可，每段文本中最多包含一个特殊字段，文本无需考虑转义符。 
+
+ </head>
+ <body>
+   <script type="text/javascript">
+      var body=document.body;
+      var arrNode=[];
+     function findNode(node){
+      var child=node.childNodes;
+      for(var i=0;i<child.length;i++){
+        if(child[0].childNodes){
+        	arrNode.push(child[0]);
+        	findNode(child[0]);
+        }
+        else{
+        	arrNode.push(child[0]);
+        }
+      }
+     }
+     function replaceText(){
+     	findNode(body);
+     	for(var j=0;j<arr.length;j++){
+     		var reg=/{{{(.+)}}}/;
+     		arr[i].innerHTML.replace(reg,function(a,b){
+     			var text="<span>"+b+"</span>";
+     			return text;
+     		})
+     	}
+     }
+   </script>
+ </body>
+</html>

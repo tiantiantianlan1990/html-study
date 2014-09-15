@@ -1,0 +1,27 @@
+<html>
+ <head>
+ 
+ </head>
+ <body>
+   <script type="text/javascript">
+     var A=[],B=[],C=[],D=[];
+     var pp=[];
+      for(var i=0;i<52;i++){
+      	pp[i]=i+1;
+      }
+      var ppNew=pp;
+      for(var j=pp.length;j>0;j--){
+      	var random=Math.floor(Math.random()*j);
+      	var tmp=ppNew[random];
+      	ppNew[random]=ppNew[j-1];
+      	ppNew[j-1]=tmp;
+      }
+      for(var k=0;k<13;k++){
+      	A[k]=ppNew[k*4];
+      	B[k]=ppNew[k*4+1];
+      	C[k]=ppNew[k*4+2];
+      	D[k]=ppNew[k*4+3];
+      }
+      console.log(A,B,C,D);
+   </script>
+ </body>

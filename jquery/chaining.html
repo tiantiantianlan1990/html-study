@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-1.11.1.js"></script>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       $(document).ready(function(){
+       	$("button").click(function(){
+          $("#p1").css("color","red")
+                  .slideUp(1000)
+                  .slideDown(1000);
+        });
+       });
+  	 </script>
+    <p id="p1">jQuery 乐趣十足！</p>
+    <button>点击这里</button>
+  </body>
+</html>

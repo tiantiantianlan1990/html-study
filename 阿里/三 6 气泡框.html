@@ -1,0 +1,34 @@
+<html>
+ <head>
+ 
+ </head>
+ <body>
+ 	<canvas id="myCanvas" width="300" height="300"></canvas>
+   <script type="text/javascript">
+       var c=document.getElementById("myCanvas");
+       var cxt=c.getContext("2d");
+       cxt.beginPath();   
+
+       cxt.moveTo(100,100);
+       cxt.lineTo(105,95); 
+       cxt.moveTo(100,100);
+       cxt.lineTo(105,105); 
+       cxt.lineTo(105,120);
+       cxt.lineTo(255,120);
+       cxt.lineTo(255,80);
+       cxt.lineTo(105,80);
+       cxt.lineTo(105,95);
+       cxt.strokeStyle="#ff0000";
+       cxt.stroke();
+       cxt.fillStyle="lightyellow";
+       cxt.fill();
+
+       cxt.font="bold 20px";
+       cxt.textAlign="center";
+       cxt.textBaseline="middle";
+       cxt.fillStyle="red";
+       cxt.fillText("这是一个Tip框",180,100);
+ 
+
+   </script>
+ </body>

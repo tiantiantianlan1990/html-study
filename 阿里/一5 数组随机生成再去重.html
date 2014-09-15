@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style type="text/css">
+ 
+   </style>
+  </head>
+  <body> 
+
+    <script type="text/javascript">
+      var a=[];
+      for(var i=0;i<100;i++){
+        a.push(parseInt(Math.random()*100));
+      }
+      console.log(a);
+      function ll(a){
+        var json={};
+        var anew=[];
+        for(var i=0;i<100;i++){
+          var key=a[i];
+          if(!json[key]){
+            anew.push(a[i]);
+            json[key]=1;
+          }
+        }
+        console.log(anew);
+        return anew;
+      }
+      ll(a);
+    </script>
+  </body>
+</html>

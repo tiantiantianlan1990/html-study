@@ -1,0 +1,34 @@
+<html>
+  <head></head>
+  <body>
+
+    <script type="text/javascript">
+       var oo=new Object();
+       oo.name="haha";
+       oo.job="hehe";
+       test(oo);
+       function test(obj){
+          if(!obj||'object'!=typeof obj){
+            return obj;
+          }
+          var c='function'===typeof obj.pop? []:{};
+          var p,v;
+          for(p in obj){
+            if(obj.hasOwnProperty(p)){
+              v=obj[p];
+              if(v&&'object'===typeof v){
+                c[p]=Ext.ux.clone(v);
+              }
+              else{
+                c[p]=v;
+              }
+            }
+          }
+
+          console.log(c);
+          return c;
+       }
+
+    </script>
+  </body>
+</html>

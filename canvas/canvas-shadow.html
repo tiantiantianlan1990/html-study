@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <style type="text/css">
+
+  </style>
+  <body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+    	<script type="text/javascript">
+           var c=document.getElementById("myCanvas");
+           var cxt=c.getContext("2d");
+        
+           cxt.shadowOffsetX=5;
+           cxt.shadowOffsetY=5;
+           cxt.shadowBlur=4;
+           cxt.shadowColor="rgba(0,0,0,0.5)";
+
+           cxt.fillStyle="#ff0000";
+           cxt.fillRect(0,0,150,75);
+           cxt.fillStyle="rgba(0,0,255,0.5)";
+           cxt.fillRect(30,30,150,75);
+
+           cxt.clearRect(50,50,30,15);
+    	</script>
+  </body>
+</html>

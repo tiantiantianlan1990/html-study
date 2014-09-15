@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  	<script type="text/javascript">
+  	 var t=document.getElementsByTagName("input");
+       function dispear(){ 	
+       	 t[0].value="";
+       }
+       function appear(){
+         t[0].value="123"
+       }
+  	</script>
+  	<form>
+    <input type="text" value="123" onfocus="dispear()" onblur="appear()"/>
+    </form>
+  </body>
+
+</html>

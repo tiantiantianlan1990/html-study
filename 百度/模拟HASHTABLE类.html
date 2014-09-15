@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style type="text/css">
+     
+   </style>
+ </head>
+ <body>
+    <script type="text/javascript">
+      var HashTable=function(){
+        this.data={};
+      };
+      HashTable.prototype.add=function(k,v){
+        this.data[k]=v;
+      }
+      HashTable.prototype.remove=function(k){
+        if(this.data[k])
+          delete this.data[k];
+      };
+      HashTable.prototype.contains=function(v){
+        var exist=false;
+        for(var k in this.data){
+          if(v==this.data[k]){
+            exist=true;
+            break;
+          }
+        }
+        return exist;
+      }
+      HashTable.prototype.length=function(){
+        var len=0;
+        for(var k in this.data){
+          len++;
+        }
+        return len;
+      };
+      var hs= new HashTable(); 
+      hs.add(1,1);
+      hs.add(2,2);
+      alert(hs.length());
+    </script>
+ </body>
+</html>

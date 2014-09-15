@@ -1,0 +1,17 @@
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+      function getBytes(str){
+      	var len=str.length;
+      	var bytes=len;
+      	for(var i=0;i<len;i++){
+      		if(str.charCodeAt(i)>255)
+      			bytes++;
+      	}
+      	return bytes;
+      }
+      console.log(getBytes("ÄãºÃ,as"));
+   </script>
+ </body>
+</html>

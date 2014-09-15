@@ -1,0 +1,19 @@
+<html>
+    <head>
+       <title>图像标签</title>
+       <meta name="content-type" charset="utf-8" />
+    </head>
+    
+    <body>
+        <a href="http://www.baidu.com"><img src="1.jpg" width="400" /></a>
+        <br />
+        <img src="1.jpg" width="50%" border="1" alt="lala"/>
+        <img src="2.jpg" width="50%" usemap="#mymap"/><!--在img中用usemap使用地图-->
+        <map name="mymap"><!--定义热点区域-->
+            <area shape="rect" coords="0,0,100,70" href="http://www.126.com" /><!--指定矩形的左上角坐标和右下角坐标 -->
+            <area shape="circle" coords="75，75，300" href="http://www.126.com" /><!--指定圆的圆心坐标和半径 -->
+            <area shape="poly" coords="75，75，100,100,0,100" href="http://www.126.com" /><!--指定多边形的各个顶点 -->
+        </map>
+    </body>
+    
+</html>

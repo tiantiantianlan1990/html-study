@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <input type="button" id="b1" onclick="test(this)" value="1"/>
+    <input type="button" id="b2" value="2"/>
+    <script type="text/javascript">
+       function test(obj){
+       //两种方法都可以
+        var clone=obj.cloneNode(true);
+        var parent=obj.parentNode;
+        parent.appendChild(clone);
+        parent.removeChild(obj);
+        //  var b=document.getElementById("b1");
+        // document.body.appendChild(b);
+       }
+    </script>
+  </body>
+</html>

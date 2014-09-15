@@ -1,0 +1,28 @@
+<html>
+  <head>
+   <script type="text/javascript">
+      var a=[1,2,3,4,5,10];
+      var b=[2,4,6,8,10];
+
+      function sortab(a,b){
+       var c=a.concat(b);
+       c.sort(function(a,b){
+        return (a-b);
+       });
+       var i=0;
+       while(i<c.length){
+        if(c[i]==c[i+1]){
+          c.splice(i,2);
+        }
+        else{
+          i++;
+        }
+       }
+       return c;
+      }
+      var c=sortab(a,b);
+       console.log(c);     
+   </script>
+  </head>
+  <body></body>
+</html>

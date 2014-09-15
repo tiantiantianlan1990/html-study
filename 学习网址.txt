@@ -1,0 +1,5 @@
+http://blog.csdn.net/yang651280121/article/details/7869852
+object function 各种问题
+http://blog.sina.com.cn/s/blog_69ab0e360100php5.html
+XMLHttpRequest
+http://blog.csdn.net/dfzone/article/details/4130380

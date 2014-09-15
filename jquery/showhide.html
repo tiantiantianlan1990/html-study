@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="jquery-1.11.1.js"></script>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       $(document).ready(function(){
+       	$("#hide").click(function(){
+       		$("p").hide(1000);
+       	})
+       	$("#show").click(function(){
+       		$("p").show(1000);
+       	})
+        $("#toggle").click(function(){
+          $("#p1").toggle(500);
+        })
+       });
+  	 </script>
+  	 <p>lalalala</p>
+     <p id="p1">111111111111111</p>
+
+     <button id="hide" type="button"></button>
+     <button id="show" type="button"></button>
+
+     <button id="toggle" type="button"></button>
+  </body>
+</html>

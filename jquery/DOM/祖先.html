@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+    .ancestors *
+      { 
+      display: block;
+      border: 2px solid lightgrey;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <script src="../jquery-1.11.1.js"></script>
+     <script type="text/javascript">
+       $(function(){
+
+         $("span").parents().css({"color":"blue","border":"2px solid blue"});
+         $("span").parent().css({"color":"red","border":"2px solid red"});
+         $("span").parents("ul").css({"color":"green","border":"2px solid green"});
+       });
+     </script>
+  </head>
+
+<body class="ancestors">body (曾曾祖父)
+  <div style="width:500px;">div (曾祖父)
+    <ul>ul (祖父)  
+      <li>li (直接父)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+</body>
+<!-- 最外围的红色边框，在 body 元素之前，是 html 元素（也是祖先）。 -->
+</html> 

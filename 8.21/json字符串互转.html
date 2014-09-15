@@ -1,0 +1,19 @@
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+     var str='haha=123&amp;hehe=456&amp;hello=789';
+       function show(str){
+       	var arr=str.split('&amp;');
+       	var json={};
+
+       	for(var i=0;i<arr.length;i++){
+       		var arr2=arr[i].split('=');
+       		json[arr2[0]]=arr2[1];
+       	}
+       	return json;
+       }
+     console.log(show(str));
+   </script>
+ </body>
+</html>

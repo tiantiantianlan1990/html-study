@@ -1,0 +1,45 @@
+<html>
+  <head></head>
+  <body>
+    <form id="testForm">
+		<label>姓名:</label><input type="text" name="user"/><br/>
+		<label>密码:</label><input type="password" name="pass"/><br/>
+		<label>性别:</label><input type="radio" name="sex" value="1"/>男
+		                    <input type="radio" name="sex" value="0"/>女<br/>
+		<label>出生年份:</label><select name="year">
+		                          <option value="1980">1980</option>
+		                          <option value="1981">1981</option>
+		                          <option value="1982">1982</option>
+		                        </select>(option务必加value属性)<br/>
+		<label>喜好:</label><input type="checkbox" name="fav" value="0"/>读书   
+		                    <input type="checkbox" name="fav" value="1"/>上网
+		                    <input type="checkbox" name="fav" value="2"/>旅游<br/>
+		<button name="more">test</button><br/>
+		<input type="submit" name="sub" id="formSub" value="提交"/>
+    </form>
+    <script type="text/javascript">
+      function serialize(form){
+      	var f=document.getElementById(form);
+        var param="";
+        for(var i=0;i<f.length;i++){
+        	if(f[i].type=="radio"||f[i].type=="checkbox"){
+        		if(!f[i].checked){
+        			continue;
+        		}
+        	}
+        	if(f[i].type=="submit"){
+        		continue;
+        	}
+        	var name=f[i].name;
+        	var val=escape(f[i].value);
+            param+=name+"="+val+"&";
+        }
+        return param.substr(0,param.length-1);
+      }
+      document.getElementById("formSub").onclick=function(){
+      	var p=serialize("testForm");
+      	console.log(p);
+      }
+    </script>
+  </body>
+</html>

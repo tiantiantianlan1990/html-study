@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+input{ display:none;}
+</style>
+<title></title>
+</head>
+
+<body>
+<input id="btn" type="button" value="我一天只出现一次。如果您点击了我，我就会永远消失"/>
+<script type="text/javascript">
+var oInput = document.getElementById('btn');
+var _cookie = function(key, val, opt) {
+	if (val !== undefined) {
+		opt = opt || {};
+		if (val === null) {
+			opt.expires = -1;
+		}
+		if (typeof opt.expires === "number") {
+			var days = opt.expires,
+				t = opt.expires = new Date();
+			t.setDate(t.getDate() + days);
+		}
+		document.cookie = encodeURIComponent(key) + "=" + encodeURIComponent(val) + (opt.expires ? '; expires=' + opt.expires.toUTCString() : '') + (opt.path ? '; path=' + opt.path : '') + (opt.domain ? '; domain=' + opt.domain : '') + (opt.secure ? '; secure' : '');
+	} else {
+		if (document.cookie == "") {
+			return ""
+		}
+		var aCookie = document.cookie.split('; ');
+		for (var i = 0, l = aCookie.length; i < l; ++i) {
+			var arr = aCookie[i].split('=');
+			if (decodeURIComponent(arr[0]) == key) {
+				return decodeURIComponent(arr[1]);
+			}
+		}
+		return '';
+	}
+};
+if (!_cookie('input')) {
+	oInput.style.display='block';
+	_cookie('input','1',{expires:1});
+}
+oInput.onclick=function() {
+	oInput.style.display='none';
+	_cookie('input','1',{expires:9999});
+};
+</script>
+</body>
+</html>

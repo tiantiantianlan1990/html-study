@@ -1,0 +1,35 @@
+<html>
+  <head>
+   <style type="text/css">
+     div{
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+     }
+     span{
+      background-color: green;
+      width: 100px;
+      height: 100px;
+     }
+     p{
+      background-color: red;
+      width: 100px;
+      height: 100px;
+     }
+   </style>
+  </head>
+  <body> 
+    <div>
+      <span>SPAN</span>DIV
+    </div>
+    <span>SPAN</span>
+    <p>P</p>
+    <script type="text/javascript">
+       document.onclick=function(e){
+        var ee=window.event||e;
+        var tag=ee['srcElement']||ee['target'];
+        alert(tag.tagName);
+       }
+    </script>
+  </body>
+</html>

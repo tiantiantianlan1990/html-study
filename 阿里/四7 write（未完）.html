@@ -1,0 +1,21 @@
+<html>
+ <head>
+   <style type="text/css">
+
+   </style>
+ </head>
+ <body>
+
+   <script type="text/javascript">
+     var write = document.write.bind(document);
+      document.write("hhh");
+
+   
+      //如何实现bind()函数
+      function bind(fn,context){
+      	return function(){
+      		return fn.apply(context,arguments);
+      	}
+      }
+   </script>
+ </body>

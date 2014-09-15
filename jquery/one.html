@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-1.11.1.js"></script>
+  </head>
+  <body>
+  	 <script type="text/javascript">
+       $(function(){
+         function btn_Click(){
+          this.innerHTML="010-1234";
+         }
+         $("button").one("click",btn_Click);
+       });
+  	 </script>
+    <button id="btnBind">点击查看联系方式</button>
+  </body>
+</html> 

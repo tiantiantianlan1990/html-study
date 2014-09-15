@@ -1,0 +1,76 @@
+<html>
+ <head>
+ 	
+ </head>
+ <body>
+ <script type="text/javascript"> 
+/**
+ * ==================================================================
+ * 题1: 实现一个遍历数组或对象里所有成员的迭代器
+ * ==================================================================
+ */
+var each = function(obj, fn){
+	var len=obj.length,i=0;
+    if(typeof(len)=='undefined'){
+    	for(i in obj){
+    		fn.call(obj[i],obj[i],i);
+    	}
+    }
+    else{
+    	for(;i<len;i++){
+    		if(false===fn.call(obj[i],i+1)){
+    			break;
+    		}
+    	}
+    }
+
+
+	//+++++++++++答题结束+++++++++++
+};
+
+try{	
+	var data1 = [4,5,6,7,8,9,10,11,12];
+	var data2 = {
+		"a": 4,
+		"b": 5,
+		"c": 6
+	};	
+	console.group(data1);
+	
+	each(data1, function(o){
+		if( 6 == this )
+			return true;
+		else if( 8 == this )
+			return false;
+		console.log(o + ": \"" + this + "\"");
+	});
+	
+	console.groupEnd();
+
+	/*------[执行结果]------
+
+	1: "4"
+	2: "5"
+	4: "7"
+
+	------------------*/
+	
+	console.group(data2);
+	
+	each(data2, function(v, n){
+		if( 5 == this )
+			return true;
+		console.log(n + ": \"" + v + "\"");
+	});
+	
+	console.groupEnd();
+	
+}catch(e){
+	console.error("执行出错，错误信息: " + e);
+}
+</script>	
+
+ </body>
+</html>
+
+

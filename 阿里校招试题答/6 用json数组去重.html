@@ -1,0 +1,17 @@
+<html>
+ <head></head>
+ <body>
+   <script type="text/javascript">
+      var arr=[23,5,7,12,23,5,13,'a','a',97];
+      var json={};
+      var newArr=[];
+      for(var i=0;i<arr.length;i++){
+        if(!json[arr[i]]){
+          newArr.push(arr[i]);
+          json[arr[i]]=1;
+        }
+      }
+      alert(newArr);
+   </script>
+ </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+   <style type="text/css">
+ 
+   </style>
+  </head>
+  <body> 
+
+    <script type="text/javascript">
+      var url = /(\w+):\/\/([\w.]+)\/(\S*)/;
+     
+      var text = "Visit my home page at http://www.isp.com/~david";
+      var result = text.match(url);
+      if (result != null) {
+          var fullurl = result[0];   // 包含"http://www.isp.com/~david"
+          var protocol = result[1];  // 包含"http"
+          var host = result[2];      // 包含"www.isp.com"
+          var path = result[3];      // 包含"~david"
+      } 
+      console.log(host);
+    </script>
+  </body>
+</html>
