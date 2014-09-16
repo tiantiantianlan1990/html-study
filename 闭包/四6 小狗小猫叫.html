@@ -26,6 +26,15 @@
 	    }, 1000*i);
 	}
 
+    for( var i = 0; i < 10; i++ ){
+	    (function(e){
+	      setTimeout(function(){
+	        for( var j = 1; j <= e; j++ ){
+	            console.log( dog() );
+	        }
+	     }, 1000*e);	
+	    })(i+1);
+	}
    </script>
   </head>
   <body></body>

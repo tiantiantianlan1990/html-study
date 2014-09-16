@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+   <style type="text/css">
+ 
+   </style>
+  </head>
+  <body> 
+    <ul id="test">
+      <li>一</li>
+      <li>二</li>
+      <li>三</li>
+    </ul>
+    <script type="text/javascript">
+       var ul = document.getElementById("test");    
+       var le=ul.childNodes.length;
+       (function(){
+         for(var i=0;i<le;i++){
+          var li=ul.childNodes[i];
+          li.onclick=(function(j){
+            return function(){
+              alert(j);
+            }
+          })(i+1)
+         }
+       })();
+    </script>
+  </body>
+</html>

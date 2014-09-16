@@ -26,9 +26,9 @@
     <p>P</p>
     <script type="text/javascript">
        document.onclick=function(e){
-        var ee=window.event||e;
-        var tag=ee['srcElement']||ee['target'];
-        alert(tag.tagName);
+        var ee=e||window.event;
+        var tar=ee.target||ee.srcElement;
+        alert(tar.tagName);
        }
     </script>
   </body>
