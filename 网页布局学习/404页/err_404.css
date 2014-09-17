@@ -1,0 +1,34 @@
+/*空间404页面样式 2014年2月18日  王鑫*/
+
+body{background:#f3f3f3;}
+
+#header{background:url(404-images/header.jpg) no-repeat center top;height:518px;min-width:1000px;}
+#header .area{width:1000px;margin:0 auto;padding:170px 0 0;}
+#header .p1{font:14px/20px "Microsoft Yahei";color:#fff;font:20px/25px "Microsoft Yahei";margin:0 0 15px;}
+#header .p2{line-height:25px;color:#c0cbd4;}
+#header .p2 a{color:#fff;}
+#content{width:1000px;margin:-100px auto 0;overflow:hidden;}
+#content h3{font:16px/20px "Microsoft Yahei";margin:0 0 10px;color:#6a6a6a;}
+#footer{text-align:center;padding:20px;}
+
+.box{background:url(404-images/photo-bg.png) no-repeat;margin: 0 0px 12px 0;width: 193px;}
+.box strong{font-weight:normal;display:block;margin:0px 2px 0 2px;word-break:break-all;height:32px;padding: 0 0 7px;}
+.box .acount{background:url("http://css.tv.itc.cn/channel/space/login-images/ico.png") no-repeat;background-position:0 -89px;padding:0 0 0 20px;color:#999; display:inline-block;}
+.box .pic{min-height:100px;_height:100px;display:block;background:#f0f0f0 url(http://css.tv.itc.cn/global/images/ico-loading.gif) no-repeat center center;}
+.box .pic img{width:180px;height:95px;}
+.box .pic-heng{height:100px;overflow:hidden;background-position:center 5px;}
+.box .pic-heng img{height:135px;margin-top:-12px;}
+.box-top,
+.box-bot{background:url(404-images/photo-bg.png) no-repeat;overflow:hidden;}
+.box-top{height:5px;}
+.box-bot{background-position:0 -5px;height:11px;}
+.box-con{background:url(404-images/photo-kuang.png) repeat-y;padding:2px 7px 4px 6px;}
+
+.loading{text-align:center;margin:20px 0;}
+
+.more{float:right;background-position:right -106px;}
+.more:hover{color:#DD0D0B;text-decoration:underline;background-position:right -129px;}
+.loading{padding:130px;text-align:center;font:16px/20px "Microsoft Yahei";}
+.ico-user{background:url("http://css.tv.itc.cn/channel/space/daren-images/bg.png") no-repeat; background-position:-286px 1px; padding:0 0 0 20px;color:#999;}
+.boxList{width:1000px;height:480px;}
+.box .rcount{background:url("http://css.tv.itc.cn/channel/space/login-images/ico.png") no-repeat; background-position:0 -116px; padding:0 0 0 20px;color:#999;margin: 0 0 0 5px;display:inline-block;}

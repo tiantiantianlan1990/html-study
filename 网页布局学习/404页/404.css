@@ -1,0 +1,37 @@
+body{background:#f3f3f3;}
+
+#header{background:url(404-images/header.jpg) no-repeat center top;height:518px;min-width:1000px;}
+#header .area{width:1000px;margin:0 auto;padding:62px 0 0;}
+#header .p1{color:#fff;font:22px/25px "Microsoft Yahei";margin:0 0 28px;}
+#header .p2{line-height:25px;color:#c0cbd4;}
+#header .p2 a{color:#fff;}
+#content{width:1000px;margin:-100px auto 0;overflow:hidden;}
+#content h3{font:16px/20px "Microsoft Yahei";margin:0 0 10px;color:#6a6a6a;}
+#footer{text-align:center;padding:20px;}
+
+.boxList{width:1100px;}
+.box{background:url(404-images/photo-bg.png) no-repeat;margin: 0 9px 13px 0;width: 193px;}
+.box strong{font-weight:normal;display:block;margin:10px 2px 0 2px;word-break:break-all;}
+.box p{margin:3px 2px 0 2px;}
+.box .acount{background:url(404-images/point.png) no-repeat;padding:0 0 0 20px;color:#999;}
+.box .pic{min-height:100px;_height:100px;display:block;background:#f0f0f0 url(http://css.tv.itc.cn/global/images/ico-loading.gif) no-repeat center center;}
+.box .pic img{width:180px;height:240px;}
+.box .pic-heng{height:100px;overflow:hidden;background-position:center 5px;}
+.box .pic-heng img{height:135px;margin-top:-12px;}
+.box-top,
+.box-bot{background:url(404-images/photo-bg.png) no-repeat;overflow:hidden;}
+.box-top{height:5px;}
+.box-bot{background-position:0 -5px;height:11px;}
+.box-con{background:url(404-images/photo-kuang.png) repeat-y;padding:2px 7px 4px 6px;}
+
+.loading{text-align:center;margin:20px 0;}
+/*add 0318*/
+.playBox{padding:4px 31px 22px 4px;width:460px;background:url(404-images/bg_play.png) no-repeat;height:330px;margin-right:10px;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=noscale, src="http://css.tv.itc.cn/channel/404-images/bg_play.png");}
+.player,.playTit{position:relative;z-index:3}
+.player{width:460px;height:296px;background:#000;}
+.playTit{padding-top:10px;color:#3a3a3a;font:14px/20px "Microsoft Yahei"}
+.hinfo{overflow:hidden;padding-top:50px}
+.mzy{margin:0 5px}
+.p2{font-family:"NSimSun"}
+.ico-b{position:relative;margin-right:10px;display:inline-block;padding:0 3px;height:20px;line-height:20px;color:#fff;background:#e4382f;font-size:12px;font-family:"NSimSun"}
+.ico-b i{position:absolute;right:-4px;top:50%;margin-top:-3px;background:url(404-images/arr.png) no-repeat;width:4px;height:7px;font-size:0;line-height:0;overflow:hidden;}

@@ -1,0 +1,35 @@
+/*common*/
+.o{overflow:hidden;zoom:1}
+.di{_display:inline}
+.db{display:block}
+.dib{display:inline-block}
+.h100{height:100%}
+.fs24{font-size:24px}
+.fs28{font-size:28px}
+.cf{color:#fff}
+a.cf:hover{color:#fff;text-decoration:none}
+
+/*mod*/
+.mod{min-width:1000px;margin:0 auto;zoom:1}
+.mod:after{display:block;visibility:hidden;clear:both;height:0;content:'.'}
+.modIn{width:980px;margin:0 auto}
+.modA{height:403px;background:url(images/bg_modA.jpg) no-repeat 50% 0}
+.modB{height:656px;background:url(images/bg_modB.jpg) no-repeat 50% 0}
+.modC{height:541px;background:url(images/bg_modC.jpg) no-repeat 50% 0}
+.h403{height:403px}
+.olay_linkmap{width:810px;margin:0 auto;padding-top:36px}
+.olay_player{width:735px;margin:0 auto 86px}
+.boxp{width: 680px;overflow: hidden;margin-left: 150px;position: relative;}
+.olay_ul{width:2000px;top:0;margin-left: -20px}
+.olay_li{width:120px;padding:0 0 0 20px;text-align:center}
+
+.lh20{height:20px;line-height:20px}
+.btn_l{background:url(images/btn_l24.png) no-repeat;width:25px;height:25px;left:95px;top:75px}
+.btn_r{background:url(images/btn_r24.png) no-repeat;width:25px;height:25px;right:95px;top:75px}
+#picbox{width: 980px;overflow: hidden;}
+
+
+
+
+
+
