@@ -1,0 +1,12 @@
+.db{display: block;}
+.rel{position: relative;}
+
+
+
+
+.mod{min-width: 1000px;margin: 0 auto;zoom:1;}
+.mod:after{display: block;visibility:hidden;clear: both;height: 0;content: '.' }
+.modIn{width: 980px;margin: 0 auto}
+.modA{height:403px;background: url(images/bg_modA.jpg) no-repeat 50% 50%}
+
+.h403{height: 403px;}

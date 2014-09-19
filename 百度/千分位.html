@@ -2,12 +2,32 @@
   <head></head>
   <body>
   	<script type="text/javascript">
-       function qian(num){
+       function qianfenwei(num){
            if(typeof(num)=='number'){
-           	 
+             num=num+"";
+           	 if(num==""){
+              alert("空值，结束");
+             }
+             var index=num.indexOf(".");
+             if(index==-1){
+              var reg=/(-?\d+)(\d{3})/;
+              while(reg.test(num)){
+                num=num.replace(reg,"$1,$2");
+              }
+             }
+              else{
+              var intPart=num.substring(0,index);
+              var pointPart=num.substring(index+1,num.length);
+              var reg=/(-?\d+)(\d{3})/;
+              while(reg.test(intPart)){
+                intPart=intPart.replace(reg,"$1,$2");
+              }
+              num=intPart+"."+pointPart;
+             }
            }
+           return num;
        }
-       qian(100);
+       qianfenwei(-1001234567.8888);
   	</script>
   </body>
 </html>
