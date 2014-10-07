@@ -1,0 +1,31 @@
+<html>
+  <head></head>
+  <body>
+  	<script type="text/javascript">
+       function key_value(str){
+        var res=[];
+        if(str==""||typeof(str)!=="string"){
+          return res;
+        }
+        var i=0;
+        if(str[i]==" ")
+          i++;
+        str=str.substring(i);
+        res=str.split("-");
+        var removed=res.splice(0,1);
+        for(var j=0;j<res.length;j++){
+          res[j]="-"+res[j];
+          res[j]=res[j].trim();
+          var arr=res[j].split(" ");
+          var key=arr[0];
+          var value=arr[1];
+          res[j]=key+" "+value;
+        }
+        var reg=/\-\w+\s+[\'\w]+/g;
+        res=str.match(reg);
+        return res;
+       }
+       console.log(key_value(" -name lala   -age  12 -university 'wuhandaxue'"));
+  	</script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <head></head>
+  <body>
+  	<script type="text/javascript">
+       function padStart(str1,num,str2){
+        if(num<=0||str1.length>=num)
+          return str1;
+        else if(str1.length<num){
+          var str="";
+          for(var i=0;i<(num-str1.length);i++){
+            str+=str2;
+          }
+          str=str.concat(str1);
+          return str;
+        }
+       }
+       console.log(padStart("heeee",4,"0"));
+  	</script>
+  </body>
+</html>

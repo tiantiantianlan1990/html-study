@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
  <head>
- 	请使用原生js实现一个div可拖拽，需要考虑浏览器兼容性
+ 	<style type="text/css">
+ 	  #div{
+ 	  	width: 200px;
+ 	  	height: 200px;
+ 	  	background-color: lightgray;
+ 	  }
+ 	</style>
  </head>
  <body>
+ 	<div id="div">test</div>
    <script type="text/javascript">
-http://www.cnblogs.com/gaotianle/archive/2010/06/09/1754837.html
+     function move(id){
+     	var o=document.getElementById(id);
+	    o.onselectstart = function(){
+	        return(false);
+	    };
+	    o.onmousedown = function(e) {
+	        e = e||window.event;
+	        var x=e.layerX||e.offsetX;
+	        var y=e.layerY||e.offsetY;
+	        x=x-document.body.scrollLeft;
+	        y=y-document.body.scrollTop;
+	        document.onmousemove = function(e)
+	        {
+	            e=e||window.event;
+	            o.style.left=(e.clientX-x)+"px";
+	            o.style.top=(e.clientY-y)+"px";
+	        };
+
+	        document.onmouseup=function()
+	        {
+	            document.onmousemove=null;
+	        };
+	    };
+     }
+     move("div");
    </script>
  </body>
 </html>

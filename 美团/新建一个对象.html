@@ -1,0 +1,33 @@
+<html>
+  <head></head>
+  <body>
+  	<script type="text/javascript">
+        var o={
+        	str:"aaa",
+        	getO:function(){
+        		return this.str;
+        	},
+        	setO:function(str){
+        	    this.str=str;
+        	}
+        }
+        console.log(o.getO());
+        console.log(o.setO("bbb"));
+        console.log(o.getO());
+/////////////////////////////////////////////////////////
+        function o(){}
+        o.prototype.str="aaa";
+        o.prototype.getO=function(){
+        	alert(this.str);
+        }
+        o.prototype.setO=function(str){
+        	this.str=str;
+        }
+        var O=new o;
+        O.getO();
+        O.setO("bbb");
+        O.getO();
+
+  	</script>
+  </body>
+</html>
